@@ -1,0 +1,2 @@
+#!/bin/bash
+ctrl/playlog $(ctrl/listlogs | tail -1)

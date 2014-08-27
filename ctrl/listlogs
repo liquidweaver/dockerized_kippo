@@ -1,0 +1,3 @@
+#!/bin/bash
+IPADDR=$(sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" kippo)
+ssh -i insecure_key root@${IPADDR} ls -rt1 /kippo/log/tty/

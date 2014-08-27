@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker run --name="kippo" -d -p 2222:2222 liquidweaver/kippo /sbin/my_init --enable-insecure-key -- /usr/local/bin/twistd -y /kippo/kippo.tac -n

@@ -1,0 +1,7 @@
+#!/bin/bash
+IPADDR=$(sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" kippo)
+ssh -i insecure_key root@${IPADDR} /kippo/utils/playlog.py /kippo/log/tty/$1
+
+# This tends to mess up the local terminal
+reset
+echo "---PLAYBACK OF $1 COMPLETE---"

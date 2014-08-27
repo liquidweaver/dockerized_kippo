@@ -1,0 +1,16 @@
+ctrl/build
+	Builds the image
+ctrl/run
+	Runs the kippo container; binds to 2222/tcp
+ctrl/destroy
+	Stops the running kippo container if necessary and deletes it
+
+ctrl/listlogs
+	Lists tty recordings
+ctrl/playlog
+	Plays back tty recordings. Specify a recording from ctrl/listlogs
+ctrl/playlast
+	Plays back the last recording
+ctrl/get_malware
+	Copies the crap they tried to get with wget into /tmp/malware
+
