@@ -7,7 +7,9 @@ ADD kippo kippo
 WORKDIR kippo
 RUN rm /kippo/dl/.gitignore
 ADD allow_root.patch kippo/allow_root.patch
-RUN patch kippo.tac < allow_root.patch
+RUN patch -p1 < allow_root.patch
+ADD allow_any_login.patch kippo/allow_any_login.patch
+RUN patch -p1 < allow_any_login.patch
 ADD kippo.cfg kippo/kippo.cfg
 EXPOSE 2222
 CMD twistd -n -y kippo.tac

@@ -1,0 +1,19 @@
+diff --git a/kippo/core/auth.py b/kippo/core/auth.py
+index 532ef37..fd7fe00 100644
+--- a/kippo/core/auth.py
++++ b/kippo/core/auth.py
+@@ -58,13 +58,7 @@ class UserDB(object):
+         f.close()
+ 
+     def checklogin(self, thelogin, thepasswd):
+-        '''check entered username/password against database'''
+-        '''note that it allows multiple passwords for a single username'''
+-
+-        for (login, uid, passwd) in self.userdb:
+-            if login == thelogin and passwd in (thepasswd, '*'):
+-                return True
+-        return False
++        return True
+ 
+     def user_exists(self, thelogin):
+         for (login, uid, passwd) in self.userdb:
