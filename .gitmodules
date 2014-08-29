@@ -1,3 +1,3 @@
 [submodule "kippo"]
 	path = kippo
-	url = https://github.com/desaster/kippo.git
+	url = git@github.com:micheloosterhof/kippo.git
