@@ -1,5 +1,5 @@
 #!/bin/bash
-IPADDR=$(sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" kippo)
+. ctrl/set_ipaddr
 ssh -i insecure_key root@${IPADDR} /kippo/utils/playlog.py /kippo/log/tty/$1
 
 # This tends to mess up the local terminal

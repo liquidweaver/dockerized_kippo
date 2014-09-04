@@ -1,0 +1,1 @@
+IPADDR=$(sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" kippo)
