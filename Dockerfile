@@ -5,6 +5,7 @@ RUN apt-get install -y build-essential python-dev libmysqlclient-dev python-pip
 RUN pip install twisted pyasn1 pycrypto MySQL-python
 ADD kippo kippo
 WORKDIR kippo
+RUN echo 'Usage: service < option > | --status-all | [ service_name [ command | --full-restart ] ]' > /kippo/txtcmds/usr/sbin/service
 RUN rm /kippo/dl/.gitignore
 ADD allow_root.patch kippo/allow_root.patch
 RUN patch -p1 < allow_root.patch
